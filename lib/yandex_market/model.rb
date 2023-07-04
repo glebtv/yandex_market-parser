@@ -39,6 +39,9 @@ module YandexMarket
     class Category < Model
       attr_reader :parent
 
+      # empty string = node content
+      map :name, to: ""
+
       def children
         @children ||= []
       end
